@@ -25,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
             if (number < 50)
             {
                 display.setText("Guess a bigger number", TextView.BufferType.EDITABLE);
-            } else if (number > 50) {
+            } else if (number > 50&&number<101) {
                 display.setText("Guess a smaller number", TextView.BufferType.EDITABLE);
-            } else {
+            } else if(number == 50) {
                 display.setText("CONGRATULATIONS !! YOU WON", TextView.BufferType.EDITABLE);
+            }
+            else
+            {
+                display.setText("Invalid Input, value entered is out of range ", TextView.BufferType.EDITABLE);
             }
         }
         catch(NumberFormatException e)
